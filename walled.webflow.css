@@ -1,0 +1,165 @@
+:root {
+  --bg: #0d0032;
+  --white: white;
+  --black: black;
+}
+
+.highlight_wrapper {
+  grid-column-gap: 0rem;
+  grid-row-gap: 0rem;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1rem 0;
+  display: flex;
+}
+
+.layout {
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
+  background-color: #fff0;
+  flex-flow: row;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+.container-large {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slide_strategy {
+  margin-right: 2rem;
+  overflow: visible;
+}
+
+.page-wrapper {
+  position: static;
+  overflow: hidden;
+}
+
+.body {
+  background-color: var(--bg);
+}
+
+.logo {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.code-embed {
+  width: 8rem;
+}
+
+.code-embed.vertical {
+  flex: 0 auto;
+  width: 1rem;
+  display: none;
+}
+
+.code-embed-2 {
+  width: 28rem;
+}
+
+.code-embed-3 {
+  width: 24rem;
+}
+
+.link-block {
+  cursor: pointer;
+}
+
+.link-block:hover {
+  opacity: .7;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 991px) {
+  .highlight_wrapper {
+    justify-content: flex-start;
+    align-self: auto;
+    align-items: center;
+  }
+
+  .layout {
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    flex-flow: column;
+    overflow: visible;
+  }
+
+  .slide_strategy {
+    width: auto;
+    height: auto;
+  }
+
+  .code-embed {
+    width: 4rem;
+    display: none;
+  }
+
+  .code-embed.vertical {
+    width: 1rem;
+    height: 4rem;
+    display: block;
+  }
+
+  .code-embed-2 {
+    width: 21rem;
+  }
+
+  .code-embed-3 {
+    width: 15rem;
+    padding-top: .5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .layout {
+    flex-flow: column;
+  }
+
+  .container-large, .body {
+    height: auto;
+  }
+
+  .logo.horizontal {
+    display: block;
+  }
+
+  .code-embed {
+    flex-flow: row;
+    display: none;
+    transform: translate(0);
+  }
+
+  .code-embed-2 {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .body {
+    height: 100vh;
+  }
+
+  .code-embed-2 {
+    width: 16rem;
+  }
+
+  .code-embed-3 {
+    width: 13rem;
+    padding-top: .5rem;
+  }
+}
